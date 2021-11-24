@@ -1,0 +1,124 @@
+/* Reset stylesheet */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Remove borderline for some browsers */
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+/* Make tegs works as block tags */
+
+nav, footer, header, aside {
+    display: block;
+}
+
+/* Make the behavier the same for different browsers,
+   And blocking increasing font on iPhone */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adust: 100%;
+    -webkit-text-size-adust: 100%;
+}
+
+/* Make inheritace happenning for font-family for these tegs */
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+/* Remove cross in input tag */
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* Reset headers h */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+@media(max-width:2000px){
+    .container{
+        max-width: 970px;
+        background-color: rgb(129, 127, 255);
+        margin: 0px auto;
+        padding: 0px 15px;        
+    }
+}
+
+@media(max-width:1200px){
+    .container{
+        max-width: 970px;
+        background-color: rgb(255, 157, 127);
+        margin: 0px auto;
+        padding: 0px 15px;        
+    }
+}
+
+@media(max-width: 992px){
+    .container{
+        max-width: 970px;
+        background-color: rgb(238, 241, 10);
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
+}
+
+@media(max-width: 767px){
+    .container{
+        max-width: none;
+        background-color: rgb(28, 129, 96);
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
