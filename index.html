@@ -8,10 +8,76 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <header>Header</header>
-        <nav>Navigation</nav>
-        <footer>Footer</footer>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container">
+                    <div class="logo">
+                        Flashcards
+                    </div>
+                    <div class="menu block__top__menu">
+                        <ul class="li__menu" id="menu">
+                            <li class="menu_selected">Home</li>
+                            <li>Flashcards</li>
+                            <li>Create</li>
+                        </ul>
+                    </div>
+                    <div class="login block__login">Login</div>
+                </div>
+            </header>
+            
+            <div class="block__row">
+                <div class="block__row1__column1">
+                    <div class="block__find__flashcard">
+                        <div class="block__title__center">Find flashcards</div>
+                        <div id="block__search">
+                            <form>
+                                <input type="search" placeholder="Type subject or keywords">
+                                <input type="submit" value="SEARCH">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__row1__column2">
+                    <div class="block__create__flashcard">
+                        <div class="block__title__center">Create flashcards</div>
+                        <div id="block__search">
+                            <button id="create_yours">CREATE YOURS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block__row">
+                <div class="block__row2__column1">
+                    <div class="block__browse__by__subject">
+                        <div class="block__title__left">Browse By Subject</div>
+                        <ul class="subject__list">
+                            <li class="subject_item">
+                                <div class="subject__color__circle1"></div>
+                                <div class="subject__item_title">Computers</div>
+                            </li>
+                            <li class="subject_item">
+                                <div class="subject__color__circle2"></div>
+                                <div class="subject__item_title">Languages</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block__row2__column2">
+                    <div class="block__popular__flashcards">
+                        <div class="block__title__center">Popular flashcards</div>
+                    </div>
+                </div>
+            </div>
+
+        <footer class="footer">
+            <div class="footer_row">
+                <div class="footer_text">
+                    Footer
+                </div>
+            </div>
+        </footer>              
     </div>
 </body>
 </html>
