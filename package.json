@@ -1,0 +1,35 @@
+{
+  "name": "Flashcards_site",
+  "version": "1.0.0",
+  "description": "Website for flashcards",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./flashcards/frontend/src/index.js --output-path ./flashcards/frontend/static/frontend",
+    "build": "webpack --mode production ./flashcards/frontend/src/index.js --output ./flashcards/frontend/static/frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doriangithub/Flashcards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doriangithub/Flashcards/issues"
+  },
+  "homepage": "https://github.com/doriangithub/Flashcards#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
