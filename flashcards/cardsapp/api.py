@@ -1,14 +1,14 @@
 from rest_framework.decorators import permission_classes
-from cardsapp.models import User
+from cardsapp.models import CardsSet
 from rest_framework import viewsets, permissions
-from .serializers import UserSerializer
+from .serializers import CardsSetSerializer
 
-# UserViewSet
-class UserViewSet(viewsets.ModelViewSet):
-    queryset=User.objects.all()
+# CardsSetViewSet
+class CardsSetViewSet(viewsets.ModelViewSet):
+    queryset=CardsSet.objects.all()
     permission_classes=[
         permissions.AllowAny
     ]
-    serializer_class=UserSerializer
+    serializer_class=CardsSetSerializer
 
 

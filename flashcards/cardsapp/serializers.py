@@ -1,10 +1,10 @@
 from django.db.models import fields
 from rest_framework import serializers
-from cardsapp.models import User
+from cardsapp.models import CardsSet
 
-# User serializer
-class UserSerializer(serializers.ModelSerializer):
+# CardsSet serializer
+class CardsSetSerializer(serializers.ModelSerializer):
     class Meta:
-        model=User
+        model=CardsSet
         fields='__all__'
 

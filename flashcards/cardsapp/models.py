@@ -1,8 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class User(models.Model):
-    username = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100, unique=True)
+class CardsSet(models.Model):
+    setName = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
 
