@@ -5,7 +5,8 @@ import Header from "./layout/Header";
 import Dashboard from "./sets/Dashboard";
 
 import {Provider} from 'react-redux';
-import store from '../store'
+import store from '../store';
+import './App.css';
 
 class App extends Component {
     render(){
@@ -13,7 +14,7 @@ class App extends Component {
             <Provider store={store}>
                 <Fragment>
                     <Header/>
-                    <div className="container">
+                    <div className="container_app">
                         <Dashboard/>
                     </div>
                 </Fragment>

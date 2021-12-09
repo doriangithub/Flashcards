@@ -1,4 +1,4 @@
-import { GET_SETS } from '../actions/types.js';
+import { GET_SETS, DELETE_SET } from '../actions/types.js';
 
 const initialState = {
     sets: []
@@ -11,7 +11,13 @@ export default function(state = initialState, action) {
                 ...state,
                 sets: action.payload
             };
+        case DELETE_SET:
+            return{
+                ...state,
+                sets: state.sets.filter(set=>set.id !== action.payload)
+            };
         default:
             return state;
     }
 }
+

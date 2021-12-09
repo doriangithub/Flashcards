@@ -1,12 +1,15 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getSets } from "../../actions/sets";
+import { getSets, deleteSet } from "../../actions/sets";
 import { Fragment } from 'react';
+import './Sets.css';
 
 export class Sets extends Component {
     static propTypes = {
-        sets: PropTypes.array.isRequired
+        sets: PropTypes.array.isRequired,
+        getSets: PropTypes.func.isRequired,
+        deleteSet: PropTypes.func.isRequired
     };
 
     componentDidMount(){
@@ -22,10 +25,9 @@ export class Sets extends Component {
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Cretaed</th>
+                            <th>Created</th>
                             <th/>
                         </tr>
-
                     </thead>
                     <tbody>
                         {this.props.sets.map(set=>(
@@ -33,6 +35,10 @@ export class Sets extends Component {
                                 <td>{set.id}</td>
                                 <td>{set.setName}</td>
                                 <td>{set.created_at}</td>
+                                <td>
+                                    <button onClick={this.props.deleteSet.bind(this, set.id)}
+                                        className="btn__delete">DELETE</button>
+                                </td>
                             </tr>      
                         ))}
                     </tbody>
@@ -46,4 +52,4 @@ const mapStateToProps = state=>({
     sets: state.sets.sets
 });
 
-export default connect(mapStateToProps, {getSets})(Sets);
+export default connect(mapStateToProps, {getSets, deleteSet})(Sets);
