@@ -9,7 +9,7 @@ export class Sets extends Component {
     static propTypes = {
         sets: PropTypes.array.isRequired,
         getSets: PropTypes.func.isRequired,
-        deleteSet: PropTypes.func.isRequired
+        deleteSet: PropTypes.func.isRequired,
     };
 
     componentDidMount(){
