@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { GET_SETS, DELETE_SET, ADD_SET, GET_ERRORS } from './types';
-import { createMessage } from './messages';
+import { GET_SETS, DELETE_SET, ADD_SET } from './types';
+import { createMessage, returnErrors } from './messages';
 
 // GET CARDS SETS
 export const getSets = () => dispatch => {
@@ -11,7 +11,7 @@ export const getSets = () => dispatch => {
             payload: res.data
         });
     })
-    .catch(err => console.Consolelog(err));
+    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
 };
 
 // DELETE SET
@@ -39,14 +39,5 @@ export const addSet=set=>dispatch=>{
             payload: res.data
         });
     })
-    .catch(err=>{
-        const errors = {
-            msg: err.response.data,
-            status: err.response.status
-        };
-        dispatch({
-            type: GET_ERRORS,
-            payload: errors
-        });
-    });
+    .catch(err=>dispatch(returnErrors(err.response.data, err.response.status)));
 };

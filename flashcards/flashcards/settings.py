@@ -43,8 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'cardsapp',
-    'frontend'
+    'frontend',
+    'knox',
+    'accounts',
 ]
+
+# Make knox's TokenAuthentication your default authentification class for django-rest-framework:
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',)
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
