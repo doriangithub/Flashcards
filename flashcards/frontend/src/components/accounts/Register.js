@@ -36,6 +36,7 @@ export class Register extends Component {
     onChange=e=>this.setState({[e.target.name]:e.target.value});
 
     render(){
+        console.log("render Register")
         if (this.props.isAuthenticated){
             return <Navigate to="/"/>;
         }

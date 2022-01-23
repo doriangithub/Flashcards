@@ -25,8 +25,9 @@ export class Login extends Component {
     onChange=e=>this.setState({[e.target.name]:e.target.value});
 
     render(){
-        console.log("render")
+        console.log("render Login")
         if (this.props.isAuthenticated){
+            console.log("redirect to root")
             return <Navigate to="/" />;
         }
         const {username, password}=this.state;

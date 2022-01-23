@@ -1,3 +1,41 @@
-.header{
-    background-color: bisque;
+.logo {
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 18px;
+    margin-left: 20px;
+}
+
+.header {
+    background-color: #fff9eb;
+    height: 80px;
+    border-bottom: 2px solid  #000;
+}
+
+.block__top__menu {
+    padding-top: 30px;
+    font-size: 22px;
+    margin-left: -40px;
+}
+
+ul#menu li {
+    display: inline;
+    padding-right: 15px;
+}
+
+.menu_selected {
+    text-decoration: underline;
+}
+
+.block__login {
+    padding-top: 32px;
+    font-size: 18px;
+}
+
+.button__logout {
+    background: none;
+}
+
+.welcome__username{
+    padding-right: 18px;
 }

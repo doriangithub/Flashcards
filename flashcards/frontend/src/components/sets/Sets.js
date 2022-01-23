@@ -17,6 +17,7 @@ export class Sets extends Component {
     }
 
     render(){
+        console.log("----render Sets")
         return(
             <Fragment>
                 <h1>Cards Sets List</h1>

@@ -137,18 +137,18 @@ body {
     text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
     font-size: 40px;
     font-weight: bold;
-    padding-top: 36px;
+    padding-top: 18px;
     margin-left: 20px;
 }
 
 .header {
     background-color: #fff9eb;
-    height: 124px;
+    height: 80px;
     border-bottom: 2px solid  #000;
 }
 
 .block__top__menu {
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 22px;
     margin-left: -40px;
 }
@@ -163,7 +163,7 @@ ul#menu li {
 }
 
 .block__login {
-    padding-top: 52px;
+    padding-top: 32px;
     font-size: 18px;
     margin-right: 20px;
 }
@@ -204,7 +204,7 @@ ul#menu li {
 .block__find__flashcard {
     width: auto;
     height: 162px;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #F9BE7C;
 }
@@ -230,7 +230,7 @@ form {
 input[type="search"] {
     font-size: 20px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 6px;
     margin-left: 20px;
     margin-right: 10px;
     flex-grow: 1;
@@ -241,7 +241,7 @@ input[type="submit"] {
     font-size: 20px;
     background-color: #A35342;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 6px;
     margin-left: 10px;
     margin-right: 20px;
     flex-grow: 0;
@@ -252,7 +252,7 @@ input[type="submit"] {
 .block__create__flashcard {
     width: auto;
     height: 162px;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #77D9DD;
 }
@@ -264,14 +264,14 @@ input[type="submit"] {
     text-align: center;
     margin: 0 auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 6px;
     font-size: 20px;
     color: white;
 }
 
 .block__browse__by__subject {
     width: auto;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #F0E3B6;    
 }
@@ -313,7 +313,7 @@ input[type="submit"] {
 .block__popular__flashcards {
     width: auto;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #E78E97;      
 }

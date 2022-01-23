@@ -44,7 +44,11 @@ class App extends Component {
                             <Alerts/>
                             <div className="container_app">
                                 <Routes>
-                                    <Route exact path="/" element={<Dashboard />}/>
+                                    <Route exact path="/" element={
+                                        <PrivateRoute>
+                                            <Dashboard />
+                                        </PrivateRoute>
+                                    } />
                                     <Route exact path="register" element={<Register />}/>
                                     <Route exact path="login" element={<Login />}/>
                                 </Routes>
@@ -58,3 +62,5 @@ class App extends Component {
 }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
+
+//<Route exact path="/" element={<Dashboard />}/>

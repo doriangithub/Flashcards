@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addSet } from "../../actions/sets";
+import  './Form.css';
 
 export class Form extends Component {
+
+    componentDidMount(){
+        //this.forceUpdate(); 
+        console.log("----componentDidMount in FORM")
+    }
 
     state = {
         setName: ""
@@ -29,10 +35,11 @@ export class Form extends Component {
     }
 
     render(){
+        console.log("render Form")
         const { name } = this.state;
         return(
-            <div>
-                <h1>Add Sets Form</h1>
+            <div className="block__find__flashcard">
+                <div className="block__title__center">Find flashcards</div>                    
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Name</label>

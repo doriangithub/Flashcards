@@ -5,7 +5,11 @@ import Sets from "./Sets";
 export default function Dashboard(){
     return(
         <Fragment>
-            <Form/>
+            <div className="block__row">
+                <div className="block__row1__column1">
+                    <Form/>
+                </div>
+            </div>
             <Sets/>
         </Fragment>
     )

@@ -13,19 +13,18 @@ export class Header extends Component{
     }
 
     render(){
+        console.log("render Header")
         const {isAuthenticated, user} = this.props.auth;
 
         const authLinks = (
-            <ul className="linkclass">
-                <span className="sdfds">
-                    <strong>{user?`Welcome ${user.username}`:""}</strong>
-                </span>
-                <li className="sdfs">
-                    <button onClick={this.props.logout} className="btncl">
-                        Logout
-                    </button>
-                </li>
-            </ul>
+            <div className="linkclass">
+                <span className="welcome__username">
+                    {user?`Welcome ${user.username}`:""}
+                </span> 
+                <button onClick={this.props.logout} className="button__logout">
+                    Logout
+                </button>
+            </div>
         );
 
         const guestLink = (
@@ -45,9 +44,22 @@ export class Header extends Component{
 
         return(
             <div className="header">
-                <a className="links" href="#">Fleshcards</a>
-                <div>
-                    {isAuthenticated?authLinks:guestLink}
+                <div className="container">
+                    <Link to='/' className='logo' >
+                        Fleshcards
+                    </Link>     
+                    <div className="menu block__top__menu">
+                        <ul className="li__menu" id="menu">
+                            <li className="menu_selected">
+                                <Link to='/' className='nav-links'>
+                                    Home
+                                </Link>
+                            </li>
+                            <li>Flashcards</li>
+                            <li>Create</li>
+                        </ul>
+                    </div>
+                    <div className="login block__login">{isAuthenticated?authLinks:guestLink}</div>                    
                 </div>
             </div>
         )

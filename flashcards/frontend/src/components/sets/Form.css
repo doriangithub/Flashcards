@@ -1,0 +1,14 @@
+.block__find__flashcard {
+    width: auto;
+    height: 162px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #F9BE7C;
+}
+
+.block__title__center {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0px 15px 0px;
+}
+
