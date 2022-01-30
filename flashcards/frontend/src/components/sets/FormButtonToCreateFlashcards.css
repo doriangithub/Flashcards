@@ -1,0 +1,24 @@
+.block__create__flashcard {
+    width: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #77D9DD;
+}
+
+.block__title__center {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0px 15px 0px;
+}
+
+#create_yours {
+    min-width: 290px;
+    height: 50px;
+    background-color: #2F587D;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+}

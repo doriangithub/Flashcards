@@ -1,0 +1,99 @@
+.block__description__flashcard {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #DFA361;
+    width: 900px;
+}
+
+.block__title__center {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0px 15px 0px;
+    margin-bottom: 10px;
+}
+
+.form__create__new__set {
+    justify-content:space-between;
+    align-items: stretch;
+}
+
+.description__item__conteiner{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    flex-direction: row;    
+}
+
+.description__row__column1 {
+    width: 33%;
+    margin-top: 10px;
+}
+
+.description__row__column2 {
+    width: 67%;
+    margin-left: 10px;
+}
+
+.labels__create__form{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.description__radio__conteiner {
+    margin-top: 10px;
+}
+
+.labels__radio__form{
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+input[type="setDescription"] {
+    font-size: 20px;
+    height: 40px;
+    border-radius: 6px;
+    flex-grow: 1;
+    padding-left: 10px;
+    width: 95%;
+}
+
+/*
+input[type="setDescription"] {
+    font-size: 20px;
+    height: 40px;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-right: 20px;
+    flex-grow: 0;
+    min-width: 150px;
+    color:white;
+    width: 540px;
+}
+*/
+
+input[type="setAccess"]{
+    font-size: 20px;
+    height: 40px;
+    border-radius: 6px;
+    margin-right: 20px;
+    flex-grow: 0;
+    min-width: 150px;
+    color:white;
+    width: 200px; 
+}
+
+/*
+    <input 
+        type="setAccess"
+        placeholder="  Public"
+        name="setAccess"
+        onChange={this.onChange}
+        value={name}
+    />  
+*/
+
+
+

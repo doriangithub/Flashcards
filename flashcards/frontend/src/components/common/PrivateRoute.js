@@ -7,14 +7,14 @@ import { useSelector } from 'react-redux';
 
 
 const PrivateRoute = ({children}) => {
-
+    console.log("in PrivateRoute")
     const currentAuth = useSelector(state => state.auth);
 
-    if(currentAuth.isLoading){
-        return console.log("Loading...");
-    }else if(!currentAuth.isAuthenticated){
-        return <Navigate to="/login"/>
-    }
+    // if(currentAuth.isLoading){
+    //     return console.log("Loading...");
+    // }else if(!currentAuth.isAuthenticated){
+    //     return <Navigate to="/login"/>
+    // }
 
     return children;
 }

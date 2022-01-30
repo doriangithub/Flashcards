@@ -26,6 +26,7 @@ export class Alerts extends Component {
     }
 
     render(){
+        console.log("render Alerts")
         return <Fragment/>;
     }
 }

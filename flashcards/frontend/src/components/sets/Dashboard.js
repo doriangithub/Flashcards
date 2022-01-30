@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import Form from "./Form";
+import FormCreateNewFlashcardSet from "./Create/FormCreateNewFlashcardSet";
 import Sets from "./Sets";
 
 export default function Dashboard(){
@@ -7,7 +7,7 @@ export default function Dashboard(){
         <Fragment>
             <div className="block__row">
                 <div className="block__row1__column1">
-                    <Form/>
+                    <FormCreateNewFlashcardSet/>
                 </div>
             </div>
             <Sets/>

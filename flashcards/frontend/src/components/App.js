@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import Header from "./layout/Header";
 import Dashboard from "./sets/Dashboard";
+import Home from "./sets/Home";
+import Create from "./sets/Create/Create";
 
 import {Provider} from 'react-redux';
 import store from '../store';
@@ -19,6 +21,9 @@ import Register from "./accounts/Register";
 
 import PrivateRoute from "./common/PrivateRoute";
 import { loadUser } from "../actions/auth";
+
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 // optional configuration
 const alertOptions = {
@@ -37,25 +42,28 @@ class App extends Component {
     render(){
         return ( 
             <Provider store={store}>
-                <AlertProvider template={AlertTemplate} {...alertOptions}>
-                    <Router>
-                        <Fragment>
-                            <Header/>
-                            <Alerts/>
-                            <div className="container_app">
-                                <Routes>
-                                    <Route exact path="/" element={
-                                        <PrivateRoute>
-                                            <Dashboard />
-                                        </PrivateRoute>
-                                    } />
-                                    <Route exact path="register" element={<Register />}/>
-                                    <Route exact path="login" element={<Login />}/>
-                                </Routes>
-                            </div>
-                        </Fragment>
-                    </Router>
-                </AlertProvider>
+                <DndProvider backend={HTML5Backend}>
+                    <AlertProvider template={AlertTemplate} {...alertOptions}>
+                        <Router>
+                            <Fragment>
+                                <Header/>
+                                <Alerts/>
+                                <div className="container_app">
+                                    <Routes>
+                                        <Route exact path="/" element={
+                                            <PrivateRoute>
+                                                <Home />
+                                            </PrivateRoute>
+                                        } />
+                                        <Route exact path="register" element={<Register />}/>
+                                        <Route exact path="login" element={<Login />}/>
+                                        <Route exact path="create" element={<Create />}/>
+                                    </Routes>
+                                </div>
+                            </Fragment>
+                        </Router>
+                    </AlertProvider>
+                </DndProvider>
             </Provider>
         )
     }
@@ -63,4 +71,8 @@ class App extends Component {
 
 ReactDOM.render(<App/>, document.getElementById('app'));
 
-//<Route exact path="/" element={<Dashboard />}/>
+// {/* <Route exact path="/" element={
+//     <PrivateRoute>
+//         <Dashboard />
+//     </PrivateRoute>
+// } /> */}
