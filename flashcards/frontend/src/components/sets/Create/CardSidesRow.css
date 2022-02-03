@@ -3,8 +3,8 @@
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .pair {
@@ -16,4 +16,53 @@
 
 .space__between {
     width: 40px;
+}
+
+.trash__button__container {
+    width: 100px;
+}
+
+a.trash {
+    display: inline-block;
+    margin-top: 80px;
+    width: 56px;
+    height: 56px;
+}
+
+.button__number {
+    background-color: #ffffff;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 44px;
+    margin-top: 80px;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  } 
+
+  .button__number__D {
+    color: grey;
+    margin-left: -1px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.button__number__DD {
+    color: grey;
+    margin-top: -7px;
+    margin-left: -8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.button__number__DDD {
+    color: grey;
+    margin-top: -7px;
+    margin-left: -15px;
+    font-size: 28px;
+    font-weight: 700;
 }
