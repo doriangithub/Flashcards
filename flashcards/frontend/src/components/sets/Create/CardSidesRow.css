@@ -29,7 +29,7 @@ a.trash {
     height: 56px;
 }
 
-.button__number {
+.button__circle {
     background-color: #ffffff;
     border: none;
     text-decoration: none;
@@ -40,29 +40,12 @@ a.trash {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-  } 
+} 
 
-  .button__number__D {
+.number {
     color: grey;
     margin-left: -1px;
     font-size: 28px;
     font-weight: 700;
 }
 
-
-.button__number__DD {
-    color: grey;
-    margin-top: -7px;
-    margin-left: -8px;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-
-.button__number__DDD {
-    color: grey;
-    margin-top: -7px;
-    margin-left: -15px;
-    font-size: 28px;
-    font-weight: 700;
-}

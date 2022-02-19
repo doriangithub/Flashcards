@@ -1,14 +1,116 @@
 import React from "react";
+import { useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import { ItemTypes } from './ItemTypes';
 import { Card } from "./Card";
 import "./CardSidesRow.css";
 import trash from './Trash_icon.svg'; 
 
-export const CardSidesRow = () => {
+export const CardSidesRow = ({ id, text, index, moveCard }) => {
+    const ref = useRef(null);
+    const [{ handlerId }, drop] = useDrop({
+        accept: ItemTypes.CARD,
+        collect(monitor) {
+            return {
+                handlerId: monitor.getHandlerId(),
+            };
+        },
+        hover(item, monitor) {
+            if (!ref.current) {
+                return;
+            }
+            const dragIndex = item.index;
+            const hoverIndex = index;
+            // Don't replace items with themselves
+            if (dragIndex === hoverIndex) {
+                return;
+            }
+            // Determine rectangle on screen
+            const hoverBoundingRect = ref.current?.getBoundingClientRect();
+            // Get vertical middle
+            const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+            // Determine mouse position
+            const clientOffset = monitor.getClientOffset();
+            // Get pixels to the top
+            const hoverClientY = clientOffset.y - hoverBoundingRect.top;
+            // Only perform the move when the mouse has crossed half of the items height
+            // When dragging downwards, only move when the cursor is below 50%
+            // When dragging upwards, only move when the cursor is above 50%
+            // Dragging downwards
+            if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+                return;
+            }
+            // Dragging upwards
+            if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+                return;
+            }
+            // Time to actually perform the action
+            moveCard(dragIndex, hoverIndex);
+            // Note: we're mutating the monitor item here!
+            // Generally it's better to avoid mutations,
+            // but it's good here for the sake of performance
+            // to avoid expensive index searches.
+            item.index = hoverIndex;
+        },
+    });
+    const [{ isDragging }, drag] = useDrag({
+        type: ItemTypes.CARD,
+        item: () => {
+            return { id, index };
+        },
+        collect: (monitor) => ({
+            isDragging: monitor.isDragging(),
+        }),
+    });
+    const opacity = isDragging ? 0 : 1;
+    drag(drop(ref));
+    if(opacity == 0){
+        return (<div className="card_sides_opacity" ref={ref} data-handler-id={handlerId}>
+                    <div className="card__row">
+            <div className="trash__button__container">
+                <button class="button__circle">            
+                    <div class="number">{text}</div>
+                </button>                
+            </div>
+            <div className="pair">
+                <Card/>
+                <div className="space__between"></div>
+                <Card/>
+            </div>
+            <div className="trash__button__container">
+                <a href="#" className="trash">
+                    <img border="0" alt="My Happy SVG" src={trash} width="56" height="56"></img>
+                </a> 
+            </div>
+        </div>
+        </div>);
+    } else {
+        return (<div className="card_sides" ref={ref} data-handler-id={handlerId}>
+                    <div className="card__row">
+            <div className="trash__button__container">
+                <button class="button__circle">            
+                    <div class="number">{text}</div>
+                </button>                
+            </div>
+            <div className="pair">
+                <Card/>
+                <div className="space__between"></div>
+                <Card/>
+            </div>
+            <div className="trash__button__container">
+                <a href="#" className="trash">
+                    <img border="0" alt="My Happy SVG" src={trash} width="56" height="56"></img>
+                </a> 
+            </div>
+        </div>
+        </div>);
+    }
+    /*    
     return (
         <div className="card__row">
             <div className="trash__button__container">
-                <button class="button__number">            
-                    <div class="button__number__D">5</div>
+                <button class="button__circle">            
+                    <div class="number">{22}</div>
                 </button>                
             </div>
             <div className="pair">
@@ -23,4 +125,5 @@ export const CardSidesRow = () => {
             </div>
         </div>
     );
+    */
 }

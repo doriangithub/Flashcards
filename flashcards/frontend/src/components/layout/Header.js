@@ -56,7 +56,11 @@ export class Header extends Component{
                                 </Link>
                             </li>
                             <li>Flashcards</li>
-                            <li>Create</li>
+                            <li>
+                                <Link to='/create' className="nav-link">
+                                    Create
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="login block__login">{isAuthenticated?authLinks:guestLink}</div>                    

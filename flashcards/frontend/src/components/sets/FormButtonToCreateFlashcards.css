@@ -1,8 +1,9 @@
-.block__create__flashcard {
+.block__create__flashcard__home {
     width: auto;
     border-radius: 12px;
     overflow: hidden;
     background-color: #77D9DD;
+    height: 162px;
 }
 
 .block__title__center {

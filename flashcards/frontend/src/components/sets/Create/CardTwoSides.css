@@ -1,9 +1,9 @@
 .card_sides{
     margin-top: 40px;
-    border: 1px dashed gray;
-    padding: 0.5rem 1rem;
-    margin-bottom: 20px;
-    background-color: rgb(255, 247, 130);
+    /*border: 1px dashed gray;*/
+    /*padding: 0.5rem 1rem;*/
+    /*margin-bottom: 20px;*/
+    /*background-color: rgb(255, 247, 130);*/
     cursor: move;
     height: 270px;
     opacity: 1;
@@ -11,10 +11,10 @@
 };
 
 .card_sides_opacity{
-    border: 1px dashed gray;
-    padding: 0.5rem 1rem;
-    margin-bottom: .5rem;
-    background-color: rgb(255, 247, 130);
+    /*border: 1px dashed gray;*/
+    /*padding: 0.5rem 1rem;*/
+    /*margin-bottom: .5rem;*/
+    /*background-color: rgb(255, 247, 130);*/
     cursor: move;
     opacity: 1;
 };

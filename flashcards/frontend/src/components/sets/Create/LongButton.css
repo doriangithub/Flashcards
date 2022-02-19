@@ -1,0 +1,17 @@
+/* Long button */
+
+.long__button {
+    width: 290px;
+    height: 50px;
+    border-radius: 14px;
+    background-color: #517D2F;
+    margin: auto;
+}
+
+.btn__text {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 8px;
+    padding: 7px;
+    color:white;
+}
